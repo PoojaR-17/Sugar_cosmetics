@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.product-section {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Default for small screens - 1 card per row */
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-section {
+    grid-template-columns: 1fr;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ff7f50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6347;
+}
+
+.offer-code {
+    color: #ff007f;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Media query for medium screens - 2 cards per row */
+@media (min-width: 768px) {
+    .product-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Media query for large screens - 3 cards per row */
+@media (min-width: 1024px) {
+    .product-section {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
